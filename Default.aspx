@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
     <div class="jumbotron">
         <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>Shumani Industrial</span></h1>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -14,7 +13,7 @@
         <div class="col-md-4">
             <h2>About Us</h2>
             <p class="MsoNormal">
-                Looking for peace of mind? <span>Shumani Industrial Automotive Workshop</span> is RMI-accredited and meets AA&#39;s strict Quality Assured standards, our mechanics are also trained to service all makes and models using only premium parts!<o:p></o:p></p>
+                Looking for peace of mind? <span>Industrial Automotive Workshop</span> is RMI-accredited and meets AA&#39;s strict Quality Assured standards, our mechanics are also trained to service all makes and models using only premium parts!<o:p></o:p></p>
             <p>
                 <a class="btn btn-default" href="About.aspx">Info and About &raquo;</a>
             </p>
