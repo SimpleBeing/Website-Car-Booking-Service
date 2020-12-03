@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\App_Data",
+    "\\Content"
   ],
-  "SelectedNode": "\\Default.aspx",
+  "SelectedNode": "\\Book.aspx.cs",
   "PreviewInSolutionExplorer": false
 }

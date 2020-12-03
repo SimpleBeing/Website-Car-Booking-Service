@@ -10,12 +10,12 @@ using System.Web.UI.WebControls;
 
 public partial class Contact : Page
 {
-    private SqlConnection sConn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Integrated Security=True;AttachDbFilename=|DataDirectory|\Database.mdf;");
+    private readonly SqlConnection sConn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Integrated Security=True;AttachDbFilename=|DataDirectory|\Database.mdf;");
     private SqlCommand sCmd;
     private DataSet dSet;
     private SqlDataAdapter dAdapter = new SqlDataAdapter();
-    private SqlCommandBuilder cBuilder;
-    private String key;
+    private string key;
+	
     protected void Page_Load(object sender, EventArgs e)
     {
         if (User.Identity.IsAuthenticated)
@@ -31,7 +31,8 @@ public partial class Contact : Page
             lblInfo.Text = "Please login Before you can Book";
         }
     }
-    public void clear()
+
+    public void Clear()
     {
         DropDownList1.SelectedIndex = 0;
         tb1.Text = User.Identity.Name;
@@ -45,7 +46,8 @@ public partial class Contact : Page
         tb9.Text = "";
         tb10.Text = "";
     }
-    protected void btnBook_Click(object sender, EventArgs e)
+
+    protected void BtnBook_Click(object sender, EventArgs e)
     {
         try
         {
@@ -97,7 +99,7 @@ public partial class Contact : Page
 
                 lblInfo.Text = "Request Saved";
                 LoadTable();
-                clear();
+                Clear();
             }
         }
         catch (Exception ex)
@@ -111,7 +113,6 @@ public partial class Contact : Page
     {
         sConn.Open();
         sCmd = new SqlCommand("Select * From  WorkShop Where Id = '" + key + "'", sConn);
-        cBuilder = new SqlCommandBuilder(dAdapter);
         sCmd.ExecuteNonQuery();
         dAdapter.SelectCommand = sCmd;
         dSet = new DataSet();
@@ -123,7 +124,7 @@ public partial class Contact : Page
         sConn.Close();
     }
 
-    protected void btnDelete_Click(object sender, EventArgs e)
+    protected void BtnDelete_Click(object sender, EventArgs e)
     {
         sConn.Open();
         SqlCommand dbCMB = sConn.CreateCommand();
